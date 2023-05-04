@@ -19,7 +19,6 @@ namespace API.Controllers
     [Route("[controller]")]
     public class UsersController : Controller
     {
-        //private readonly MyDBContext _context;
         private IUserService _userService;
 
         /*User user = new User
