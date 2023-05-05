@@ -1,4 +1,5 @@
 ﻿using System;
+using API.Models;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

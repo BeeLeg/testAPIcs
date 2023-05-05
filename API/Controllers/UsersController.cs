@@ -8,6 +8,7 @@ using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -59,6 +60,20 @@ namespace API.Controllers
             return Ok(users);
         }
 
+        [HttpGet("resctrited")]
+        public IActionResult GetAllRestricted()
+        {
+            var users = _userService.GetAllRestricted();
+            return Ok(users);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetUserById(int id)
+        {
+            var user = _userService.GetUserById(id);
+
+            return Ok(user);
+        }
     }
 }
 
